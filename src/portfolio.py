@@ -1,7 +1,8 @@
 #recording asset allocation within in this portfolio with weights summing to 1.0
 class Portfolio:
-    def __init__(self, weights: dict):
+    def __init__(self, weights: dict, asset_types: dict):
         self.weights = weights
+        self.asset_types = asset_types
         self.validate_weights()
     
     def validate_weights(self):
@@ -10,15 +11,23 @@ class Portfolio:
             raise ValueError("Total weights must sum to 1.0")
         
     def equity_exposure(self):
-        equity_assets = ['cn_equity', 'us_equity', 'intl_equity']
-        return sum(self.weights.get(asset, 0) for asset in equity_assets)
-    
+        return sum(
+            w for t, w in self.weights.items()
+            if self.asset_types.get(t) == "equity"
+        )
+
     def bond_exposure(self):
-        return self.weights.get('bonds', 0)
-    
+        return sum(
+            w for t, w in self.weights.items()
+            if self.asset_types.get(t) == "bond"
+        )
+
     def cash_exposure(self):
-        return self.weights.get('cash', 0)
-    
+        return sum(
+            w for t, w in self.weights.items()
+            if self.asset_types.get(t) == "cash"
+        )
+
     def risk_band(self):
         equity_exp = self.equity_exposure()
         if equity_exp >= 0.65:
