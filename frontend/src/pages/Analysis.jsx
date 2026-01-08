@@ -24,20 +24,6 @@ export default function Analysis() {
     const [showTickerDropdown, setShowTickerDropdown] = useState(false);
     const ARTICLES_PER_PAGE = 10;
 
-    const loadNews = async () => {
-        if (!portfolioId) return;
-        setLoadingNews(true);
-        try {
-            const data = await getPortfolioNews(portfolioId, selectedTicker || null, 100);
-            setNewsArticles(data.articles || []);
-        } catch (err) {
-            console.error('Failed to load news:', err);
-            setNewsArticles([]);
-        } finally {
-            setLoadingNews(false);
-        }
-    };
-
     const loadNews = useCallback(async () => {
         if (!portfolioId) return;
         setLoadingNews(true);
