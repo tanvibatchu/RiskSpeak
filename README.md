@@ -4,7 +4,7 @@ Turning stocks and prices into understandable risks
 
 RiskSpeak is a portfolio risk analysis platform that helps investors understand *what could go wrong* — before it does. Instead of raw metrics or opaque scores, RiskSpeak translates portfolio data into structured, explainable risk insights so that everyone can understand.
 
-<img width="1400" alt="RiskSpeak Demo Screenshot" src="https://github.com/user-attachments/assets/REPLACE_ME" />
+<img width="1150" height="769" alt="Screenshot 2026-01-11 at 11 11 31 AM" src="https://github.com/user-attachments/assets/354771fc-51f0-4b31-9aeb-5b096103100f" />
 
 ---
 
