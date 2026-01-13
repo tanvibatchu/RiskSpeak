@@ -1,6 +1,5 @@
-# RiskSpeak
-
-Turning stocks and prices into understandable risks
+# RiskSpeak 
+- Turning stocks and prices into understandable risks
 
 RiskSpeak is a portfolio risk analysis platform that helps investors understand *what could go wrong* — before it does. Instead of raw metrics or opaque scores, RiskSpeak translates portfolio data into structured, explainable risk insights so that everyone can understand.
 
